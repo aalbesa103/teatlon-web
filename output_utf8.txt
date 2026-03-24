@@ -1,0 +1,82 @@
+=== EXCEL DATA ===
+
+--- Sheet: Combos y precios ---
+    Unnamed: 0                                            Unnamed: 1 Unnamed: 2              Unnamed: 3    Unnamed: 4  Unnamed: 5 Unnamed: 6
+0          NaN              Festival de Teatro — Sistema de entradas        NaN                     NaN           NaN         NaN        NaN
+1          NaN                                                   NaN        NaN                     NaN           NaN         NaN        NaN
+2          NaN                                  Precio base entrada:      20000  ← modificar este valor           NaN         NaN        NaN
+3          NaN                                                   NaN        NaN                     NaN           NaN         NaN        NaN
+4          NaN  COMBOS POR BLOQUE — Mayor descuento, bloque completo        NaN                     NaN           NaN         NaN        NaN
+5          NaN                                                 Combo   Entradas               Descuento  Precio total  Precio c/u     Ahorro
+6          NaN                                  Combo sábado (1 sáb)          2                     0.3         28000       14000      12000
+7          NaN                                 Combo domingo (1 dom)          2                     0.3         28000       14000      12000
+8          NaN                             Combo viernes (2 viernes)          2                     0.3         28000       14000      12000
+9          NaN                                   Combo fin de semana          5                    0.55       45000.0      9000.0    55000.0
+10         NaN                               Combo festival completo         10                    0.65         70000        7000     130000
+11         NaN                                                   NaN        NaN                     NaN           NaN         NaN        NaN
+12         NaN             PROMOS PROGRESIVAS — Funciones a elección        NaN                     NaN           NaN         NaN        NaN
+13         NaN                                                 Combo   Entradas               Descuento  Precio total  Precio c/u     Ahorro
+14         NaN                                            2da al 50%          2                    0.25         30000       15000      10000
+15         NaN                                                   3x2          3                    0.33       40200.0     13400.0    19800.0
+16         NaN                                                   4x2          4                     0.5         40000       10000      40000
+17         NaN                                                   NaN        NaN                     NaN           NaN         NaN        NaN
+18         NaN                       REFERENCIA — Entrada individual        NaN                     NaN           NaN         NaN        NaN
+19         NaN                                    Entrada individual          1                       0         20000       20000          -
+
+--- Sheet: Cupos y recaudación ---
+    Unnamed: 0                                                                          Unnamed: 1 Unnamed: 2        Unnamed: 3      Unnamed: 4         Unnamed: 5                 Unnamed: 6
+0          NaN                                                   Cupos y simulación de recaudación        NaN               NaN             NaN                NaN                        NaN
+1          NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+2          NaN                                                            Precio base (de hoja 1):      20000   Capacidad sala:              40                NaN                        NaN
+3          NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+4          NaN                                                           CUPOS — Combos por bloque        NaN               NaN             NaN                NaN                        NaN
+5          NaN                                                                               Combo       Cupo         Descuento  Entradas/combo  Recaudación total  Butacas que ocupa/función
+6          NaN                                                              Combo total (10 func.)          5              0.65              10             350000                      todas
+7          NaN                                                               Combo finde (5 func.)          4              0.55               5           180000.0                5 del finde
+8          NaN                                                         Combo día sáb/dom (2 func.)          4               0.3               2             112000                  2 del día
+9          NaN                                                             Combo viernes (2 func.)          2               0.3               2              56000                  2 viernes
+10         NaN                                                              Subtotal combos bloque        NaN               NaN             NaN             698000                        NaN
+11         NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+12         NaN                                                          CUPOS — Promos progresivas        NaN               NaN             NaN                NaN                        NaN
+13         NaN                                                                               Combo       Cupo         Descuento  Entradas/combo  Recaudación total  Butacas que ocupa/función
+14         NaN                                                                          2da al 50%         10              0.25               2             300000                 a elección
+15         NaN                                                                                 3x2          5              0.33               3           201000.0                 a elección
+16         NaN                                                                                 4x2         10               0.5               4             400000                 a elección
+17         NaN                                                         Subtotal promos progresivas        NaN               NaN             NaN             901000                        NaN
+18         NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+19         NaN                                   ESTIMACIÓN — Venta individual (butacas restantes)        NaN               NaN             NaN                NaN                        NaN
+20         NaN                                             Butacas combo/func. (peor caso sáb/dom)         21  butacas ocupadas             NaN                NaN                        NaN
+21         NaN                                                   Butacas libres/función (promedio)         19    butacas libres             NaN                NaN                        NaN
+22         NaN                                                     Recaudación individual estimada        NaN               NaN             NaN            3800000         si se llenan todas
+23         NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+24         NaN                                                              RESUMEN DE RECAUDACIÓN        NaN               NaN             NaN                NaN                        NaN
+25         NaN                                                          Recaudación total estimada        NaN               NaN             NaN            5399000                        NaN
+26         NaN                                                Recaudación máxima (todo individual)        NaN               NaN             NaN            8000000                        NaN
+27         NaN                                                         % de recaudación vs. máximo        NaN               NaN             NaN           0.674875                        NaN
+28         NaN                                                                                 NaN        NaN               NaN             NaN                NaN                        NaN
+29         NaN  Los cupos en azul se pueden modificar. Los cálculos se actualizan automáticamente.        NaN               NaN             NaN                NaN                        NaN
+
+=== DOCX DATA ===
+Temas tratados el 5/3/ 2026 Reunion zoom:
+Pensar Nombre del Festival(prioridad)
+Consulta a la sala respecto mínimo de entradas requerido por función(prioridad)
+Intercambio de fecha entre Roja y Fotogénesis
+Cada dramaturgo/a RECONFIRMAR con sus elencos fecha y horario de la grilla (al pie)
+Alberto va a hacer un primer flyer para la difu.
+Quien tenga contactos de radios o medios digitales de difusión enviarlos a Roxana que va a hacer un cronograma para recorrer con Guille.
+Todos: Escribir o (mandar audio) a Roxana con un texto breve que resuma el sentido o el objetivo o lo que quieran decir respecto de la creación/realización de éste Festival. (Con eso haré un texto conjunto para la difusión en medios)
+—------
+Temas organizados en Noviembre 2025
+Horario de las funciones:
+ sábados 6 y 13/6: 19 y 21 :00 hs
+ domingo 7 y 14/6:  18 y 20:00 hs
+ viernes..??
+Obras
+Tengamos en cuenta que el dramaturgo de cada elenco sea quien va a consultar el compromiso para las fechas aquí determinada razón por la cual es muy importante el tema de la fecha por sí o por no creo que sería lo primero que debemos confirmar o cambiar.
+Fechas estimadas qué podrían ser cambiadas en el caso de que el elenco no pueda en esa fecha.
+Notas relevantes
+Los autores son responsables de los objetos escénicos necesarios ( o sea supervisar quién los lleva y quién los trae) no se van a ocupar los directores de esa función
+Tema intermedio musical
+ El sábados y los domingos entre la primera y la segunda función surgió ésta idea:
+llamar una banda para que esté en el patio para un interludio musical y además un pequeño buffet cuyos detalles -en caso de que todos lo aprueben- aún no están pensados.
+La convocatoria a cada elenco junto con el compromiso de responder al festival, deberán hacerlas los autores de cada obra ( ocurre que Perico dirige 6 elencos y pidió esto )

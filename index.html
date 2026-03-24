@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEATLÓN | Festival de Teatro Platense</title>
+    <meta name="description" content="Festival de Teatro Platense. 10 Obras. 6 Días. Un escenario y toda la ciudad. 5, 6, 7, 12, 13 y 14 de JUNIO en Espacio 44.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">TEATLÓN</a>
+            <button class="mobile-menu-btn" aria-label="Abrir menú" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#obras">Obras</a></li>
+                <li><a href="#cronograma">Cronograma</a></li>
+                <li><a href="#entradas">Entradas</a></li>
+                <li><a href="#nosotros">El Festival</a></li>
+                <li><a href="#contacto" class="btn-outline">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">Espacio 44 presenta</p>
+            <h1 class="title">TEATLÓN</h1>
+            <h2 class="tagline">Festival de Teatro Platense</h2>
+            <p class="description">10 Obras. 6 Días. Un escenario y toda la ciudad.</p>
+            <div class="dates-badge">
+                5, 6, 7, 12, 13 y 14 DE JUNIO
+            </div>
+            <div class="cta-container">
+                <a href="#obras" class="btn btn-primary">Ver Programación</a>
+                <a href="#entradas" class="btn btn-secondary">Comprar Entradas</a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <!-- Nosotros Section -->
+    <section class="section about" id="nosotros">
+        <div class="container">
+            <html-content>
+                <h2 class="section-title">Más que un ciclo, <span>una maratón teatral</span></h2>
+                <div class="about-text">
+                    <p>El teatro independiente tiene su propio pulso, y en La Plata late más fuerte. TEATLÓN nace como un punto de encuentro para elencos locales, dramaturgias diversas y públicos curiosos.</p>
+                    <p>Durante dos fines de semana, <strong>Espacio 44</strong> se transforma en el epicentro de la creación escénica contemporánea. Un panorama vibrante de lo que está sucediendo hoy en el teatro de nuestra ciudad.</p>
+                </div>
+            </html-content>
+        </div>
+    </section>
+
+    <!-- Obras Section -->
+    <section class="section obras" id="obras">
+        <div class="container">
+            <h2 class="section-title">Obras <span>Participantes</span></h2>
+            <div class="obras-grid" id="obras-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cronograma Section -->
+    <section class="section cronograma" id="cronograma">
+        <div class="container">
+            <h2 class="section-title">Cronograma <span>de Funciones</span></h2>
+            <div class="filtros-dias" id="day-filters">
+                <button class="filter-btn active" data-filter="all">Todos los días</button>
+                <button class="filter-btn" data-filter="viernes">Viernes</button>
+                <button class="filter-btn" data-filter="sabados">Sábados</button>
+                <button class="filter-btn" data-filter="domingos">Domingos</button>
+            </div>
+            <div class="timeline" id="timeline-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Entradas Section -->
+    <section class="section entradas" id="entradas">
+        <div class="container">
+            <div class="entradas-header">
+                <h2 class="section-title">Tu Entrada <span>al Teatlón</span></h2>
+                <p>Asegurá tu lugar. Cupos limitados por función en Espacio 44. Cuantas más obras ves, menos pagás.</p>
+            </div>
+            
+            <div class="pricing-tabs">
+                <button class="tab-btn active" data-target="individuales">Individuales</button>
+                <button class="tab-btn" data-target="combos-dias">Pases de Día</button>
+                <button class="tab-btn" data-target="promos">Promos Progresivas</button>
+                <button class="tab-btn highlights" data-target="combos-épicos">Los Pases Épicos</button>
+            </div>
+
+            <div class="pricing-container" id="pricing-container">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto / Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3 class="footer-logo">TEATLÓN</h3>
+                <p>Festival de Teatro Platense en Espacio 44.</p>
+                <p>Teatro · Danza · Música</p>
+            </div>
+            <div class="footer-col">
+                <h4>Dirección</h4>
+                <p>Espacio 44</p>
+                <p>Avenida 44 Nº XXX, La Plata.</p>
+                <a href="#" class="footer-link">Ver en Google Maps</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><a href="mailto:hola@teatlon.com.ar" class="footer-link">hola@teatlon.com.ar</a></p>
+                <p><a href="mailto:prensa@teatlon.com.ar" class="footer-link">prensa@teatlon.com.ar</a> (Medios)</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">IG @teatlon.laplata</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TEATLÓN. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
