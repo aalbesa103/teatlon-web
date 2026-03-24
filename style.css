@@ -239,6 +239,26 @@ a {
     flex-wrap: wrap;
 }
 
+/* ─── La Plata grid background (cuadrícula + diagonales) ─── */
+.hero-grid-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+        /* Cuadrícula regular — calles de La Plata */
+        linear-gradient(rgba(253,246,227,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(253,246,227,0.045) 1px, transparent 1px),
+        /* Diagonales — avenidas diagonales de La Plata */
+        linear-gradient(45deg,  rgba(253,246,227,0.025) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(253,246,227,0.025) 1px, transparent 1px);
+    background-size:
+        64px 64px,
+        64px 64px,
+        128px 128px,
+        128px 128px;
+}
+
 /* Abstract Shapes */
 .hero-shapes {
     position: absolute;
@@ -276,9 +296,16 @@ a {
     background-color: #1c1323;
     border-top: 5px solid var(--accent-orange);
 }
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 50px;
+}
 .about-text {
-    max-width: 800px;
-    font-size: 1.2rem;
+    max-width: 680px;
+    font-size: 1.1rem;
     color: var(--text-muted);
 }
 .about-text p {
@@ -286,6 +313,62 @@ a {
 }
 .about-text strong {
     color: var(--text-main);
+}
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: right;
+    padding-right: 10px;
+    border-right: 2px solid rgba(253,246,227,0.08);
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+.stat-num {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-gold);
+}
+.stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* Sede info bar */
+.sede-info {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 24px 30px;
+    background: rgba(253,246,227,0.03);
+    border: 1px solid rgba(253,246,227,0.08);
+    border-left: 4px solid var(--accent-teal);
+}
+.sede-info__bloque {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.sede-info__icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+.sede-info__bloque strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+.sede-info__bloque p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 /* --- Obras --- */
@@ -377,6 +460,19 @@ a {
     opacity: 1;
 }
 
+/* Obra color accent bar */
+.obra-color-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 3;
+    transition: height var(--transition-fast);
+}
+.obra-card:hover .obra-color-bar {
+    height: 7px;
+}
+
 /* --- Cronograma --- */
 .cronograma {
     background-color: var(--bg-dark);
@@ -450,7 +546,24 @@ a {
 }
 .timeline-item.interludio .show-title {
     color: var(--accent-teal);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.interludio-tag {
+    display: inline-block;
+    background: rgba(26,140,140,0.15);
+    color: var(--accent-teal);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-bottom: 6px;
+}
+
+/* Active nav link */
+.nav-links a.nav-active {
+    color: var(--accent-gold);
 }
 
 /* --- Entradas --- */
@@ -614,6 +727,23 @@ a {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-stats {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        border-right: none;
+        border-top: 1px solid rgba(253,246,227,0.08);
+        padding-top: 24px;
+        padding-right: 0;
+    }
+    .sede-info {
+        flex-direction: column;
+        gap: 20px;
+    }
     .nav-links {
         position: fixed;
         right: -100%;

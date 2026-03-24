@@ -15,15 +15,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Navbar Scroll Effect
+    // Navbar Scroll Effect + active nav highlighting
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    const allNavLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('section[id], header[id]');
+
+    const updateActiveNav = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+        let current = '';
+        sections.forEach(sec => {
+            if (window.scrollY >= sec.offsetTop - 120) {
+                current = sec.id;
+            }
+        });
+        allNavLinks.forEach(link => {
+            link.classList.remove('nav-active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('nav-active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
 
     // 2. Render Obras
     const obrasContainer = document.getElementById('obras-container');
@@ -32,19 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const getInitials = (title) => title.substring(0, 2).toUpperCase();
             const card = document.createElement('div');
             card.className = 'obra-card';
-            
-            // if image exists, show it as background, else fallback to initials
-            const bgImage = obra.imagen ? 
-                `<img src="${obra.imagen}" alt="${obra.titulo}" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; filter: brightness(0.7) blur(2px); transition: filter 0.3s ease;" onmouseover="this.style.filter='brightness(0.9) blur(0px)'" onmouseout="this.style.filter='brightness(0.7) blur(2px)'">` : 
-                `<div class="obra-img-placeholder">${getInitials(obra.titulo)}</div>`;
+            card.id = `obra-${obra.id}`;
+
+            // Color accent bar (inspired by geometric flyer)
+            const colorBar = `<div class="obra-color-bar" style="background:${obra.color || 'var(--accent-teal)'};"></div>`;
+
+            // Image or initials placeholder
+            const bgImage = obra.imagen
+                ? `<img src="${obra.imagen}" alt="${obra.titulo}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;filter:brightness(0.7) blur(2px);transition:filter 0.3s ease;" onmouseover="this.style.filter='brightness(0.9) blur(0px)'" onmouseout="this.style.filter='brightness(0.7) blur(2px)'">`
+                : `<div class="obra-img-placeholder" style="background:linear-gradient(135deg,#1c1323,#2a1f33);">${getInitials(obra.titulo)}</div>`;
+
+            const subtitulo = obra.subtitulo ? `<span style="display:block;font-size:0.75rem;color:var(--accent-teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">${obra.subtitulo}</span>` : '';
 
             card.innerHTML = `
+                ${colorBar}
                 ${bgImage}
-                <div class="obra-info" style="background: linear-gradient(to top, rgba(24,16,30,1) 40%, rgba(24,16,30,0) 100%); position:absolute; bottom:0; padding:20px 20px 10px; width:100%; z-index:2;">
-                    <div class="obra-tags">${obra.duracion} / ${obra.direccion}</div>
+                <div class="obra-info">
+                    <div class="obra-tags">${obra.duracion} / Dir: ${obra.direccion}</div>
+                    ${subtitulo}
                     <h3 class="obra-title">${obra.titulo}</h3>
                     <p class="obra-desc">${obra.sinopsis}<br><br><strong>Elenco:</strong> ${obra.elenco}</p>
-                    <a href="${obra.link}" class="obra-link" target="_blank">Conseguir Entradas →</a>
+                    <a href="${obra.link}" class="obra-link" target="_blank">Ver en Alternativa Teatral →</a>
                 </div>
             `;
             obrasContainer.appendChild(card);
@@ -73,11 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 diaData.eventos.forEach(evt => {
                     const item = document.createElement('div');
                     item.className = `timeline-item ${evt.tipo === 'interludio' ? 'interludio' : ''}`;
-                    item.innerHTML = `
-                        <div class="time-badge">${evt.hora}</div>
-                        <h4 class="show-title">${evt.titulo}</h4>
-                        ${evt.tipo === 'obra' ? '<a href="#entradas" style="color:var(--text-muted); text-decoration:underline;">Comprar Entradas →</a>' : ''}
-                    `;
+
+                    // Find the obra color if it's a show
+                    let obraColor = 'var(--accent-red)';
+                    if (evt.tipo === 'obra') {
+                        const obraData = Data.obras.find(o =>
+                            evt.titulo.toLowerCase().includes(o.titulo.toLowerCase().substring(0, 6))
+                        );
+                        if (obraData) obraColor = obraData.color;
+                    }
+
+                    if (evt.tipo === 'interludio') {
+                        item.innerHTML = `
+                            <span class="interludio-tag">Interludio</span>
+                            <div class="time-badge">${evt.hora}</div>
+                            <h4 class="show-title">${evt.titulo}</h4>
+                        `;
+                    } else {
+                        item.innerHTML = `
+                            <div class="time-badge">${evt.hora}</div>
+                            <h4 class="show-title" style="border-left: 3px solid ${obraColor}; padding-left: 10px;">${evt.titulo}</h4>
+                            <a href="#entradas" style="color:var(--text-muted); text-decoration:underline; font-size:0.85rem;">Conseguir entrada →</a>
+                        `;
+                    }
                     timelineContainer.appendChild(item);
                 });
             }
