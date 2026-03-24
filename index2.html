@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TEATLÓN – Ciclo de Teatro Platense. 10 obras, 6 noches. 5 al 14 de junio 2026 en Espacio 44, La Plata." />
+  <meta property="og:title"       content="TEATLÓN – Ciclo de Teatro Platense" />
+  <meta property="og:description" content="10 obras de teatro independiente. Junio 2026 en La Plata." />
+  <meta property="og:type"        content="website" />
+  <title>TEATLÓN – Ciclo de Teatro Platense</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style2.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav class="nav" id="nav2">
+  <div class="nav__inner">
+    <a href="#inicio2" class="nav__logo">TEATLÓN</a>
+
+    <button class="nav__burger" id="burger2" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__links" id="navLinks2">
+      <li><a href="#prog2"     class="nav__link">Programación</a></li>
+      <li><a href="#obras2"    class="nav__link">Obras</a></li>
+      <li><a href="#entradas2" class="nav__link">Entradas</a></li>
+      <li><a href="#sobre2"    class="nav__link">El festival</a></li>
+      <li><a href="#contacto2" class="nav__link">Contacto</a></li>
+      <li><a href="#entradas2" class="nav__pill">Comprá tu entrada</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<header class="hero" id="inicio2">
+  <!-- Grilla urbana de La Plata como fondo -->
+  <div class="hero__bg lp-grid-light" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+
+    <!-- Columna izquierda: texto -->
+    <div class="hero__texto">
+      <p class="hero__meta">La Plata · Argentina · Junio 2026</p>
+      <h1 class="hero__title">TEATLÓN</h1>
+      <p class="hero__sub">Ciclo de Teatro Platense</p>
+
+      <div class="hero__fechas">
+        <span class="hero__num">5 · 6 · 7</span>
+        <span class="hero__sep">y</span>
+        <span class="hero__num">12 · 13 · 14</span>
+        <span class="hero__mes">de junio</span>
+      </div>
+
+      <p class="hero__sede">Espacio 44 · Teatro · Danza · Música</p>
+
+      <div class="hero__btns">
+        <a href="#prog2"     class="btn btn--navy">Ver programación</a>
+        <a href="#entradas2" class="btn btn--red">Comprá tu entrada</a>
+      </div>
+    </div>
+
+    <!-- Columna derecha: mosaico de obras (como el flyer geométrico) -->
+    <div class="hero__mosaico" aria-hidden="true">
+      <div class="bloque bloque--fotogenesis">Fotogénesis</div>
+      <div class="bloque bloque--jubilacion">Jubilación</div>
+      <div class="bloque bloque--roja">Roja</div>
+      <div class="bloque bloque--osada">Osada<br>escritura</div>
+      <div class="bloque bloque--desalojo">Desalojo</div>
+      <div class="bloque bloque--flirteo">Flirteo</div>
+      <div class="bloque bloque--soysola">Soy<br>sola</div>
+      <div class="bloque bloque--lluvia"><em>Lluvia<br>verde</em></div>
+      <div class="bloque bloque--juana">Las esperas<br>de Juana</div>
+      <div class="bloque bloque--ranas">Cuando las<br>ranas críen<br>pelos</div>
+    </div>
+
+  </div>
+
+  <!-- Barra de stats -->
+  <div class="hero__strip">
+    <div class="hero__strip-inner">
+      <span><strong>10</strong> obras</span>
+      <span class="strip-dot">·</span>
+      <span><strong>12</strong> funciones</span>
+      <span class="strip-dot">·</span>
+      <span><strong>6</strong> noches</span>
+      <span class="strip-dot">·</span>
+      <span><strong>1</strong> festival</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PROGRAMACIÓN
+══════════════════════════════════════════ -->
+<section class="sec prog" id="prog2">
+  <div class="sec__inner">
+    <div class="sec__head">
+      <span class="tag">Programación</span>
+      <h2 class="sec__titulo">Junio 2026</h2>
+      <p class="sec__bajada">Dos fines de semana. Funciones con interludio musical entre obras.<br>
+        Viernes y sábados 19 y 21 hs · Domingos 18 y 20 hs.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros" role="tablist">
+      <button class="filtro filtro--activo" data-filter="todos">Todos</button>
+      <button class="filtro" data-filter="s1">5 al 7/6</button>
+      <button class="filtro" data-filter="s2">12 al 14/6</button>
+      <button class="filtro" data-filter="viernes">Viernes</button>
+      <button class="filtro" data-filter="sabado">Sábados</button>
+      <button class="filtro" data-filter="domingo">Domingos</button>
+    </div>
+
+    <!-- Días -->
+    <div class="prog__grilla">
+
+      <article class="prog__dia" data-tags="s1 viernes">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Viernes</span>
+          <span class="prog__date">5 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">21:00</span>
+            <div class="prog__show bloque--fotogenesis">
+              <span class="prog__show-nombre">Fotogénesis</span>
+              <a href="#obra2-fotogenesis" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prog__dia" data-tags="s1 sabado">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Sábado</span>
+          <span class="prog__date">6 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">19:00</span>
+            <div class="prog__show bloque--desalojo">
+              <span class="prog__show-nombre">Desalojo</span>
+              <a href="#obra2-desalojo" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+          <div class="prog__funcion">
+            <span class="prog__hora">21:00</span>
+            <div class="prog__show bloque--osada">
+              <span class="prog__show-nombre">Osada escritura</span>
+              <a href="#obra2-osadaescritura" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prog__dia" data-tags="s1 domingo">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Domingo</span>
+          <span class="prog__date">7 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">18:00</span>
+            <div class="prog__show bloque--soysola">
+              <span class="prog__show-nombre">Soy sola</span>
+              <a href="#obra2-soysola" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+          <div class="prog__funcion">
+            <span class="prog__hora">20:00</span>
+            <div class="prog__show bloque--flirteo">
+              <span class="prog__show-nombre">Flirteo</span>
+              <a href="#obra2-flirteo" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prog__dia" data-tags="s2 viernes">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Viernes</span>
+          <span class="prog__date">12 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">21:00</span>
+            <div class="prog__show bloque--roja">
+              <span class="prog__show-nombre">Roja</span>
+              <a href="#obra2-roja" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prog__dia" data-tags="s2 sabado">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Sábado</span>
+          <span class="prog__date">13 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">19:00</span>
+            <div class="prog__show bloque--lluvia">
+              <span class="prog__show-nombre">Lluvia verde</span>
+              <a href="#obra2-lluviaverde" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+          <div class="prog__funcion">
+            <span class="prog__hora">21:00</span>
+            <div class="prog__show bloque--juana">
+              <span class="prog__show-nombre">Las esperas de Juana</span>
+              <a href="#obra2-lasesperas" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="prog__dia" data-tags="s2 domingo">
+        <header class="prog__dia-header">
+          <span class="prog__weekday">Domingo</span>
+          <span class="prog__date">14 de junio</span>
+        </header>
+        <div class="prog__funciones">
+          <div class="prog__funcion">
+            <span class="prog__hora">18:00</span>
+            <div class="prog__show bloque--jubilacion">
+              <span class="prog__show-nombre">Jubilación</span>
+              <a href="#obra2-jubilacion" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+          <div class="prog__funcion">
+            <span class="prog__hora">20:00</span>
+            <div class="prog__show bloque--ranas">
+              <span class="prog__show-nombre">Cuando las ranas críen pelos</span>
+              <a href="#obra2-cuandolascrien" class="prog__ver">Ver obra ↓</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /prog__grilla -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     OBRAS
+══════════════════════════════════════════ -->
+<section class="sec obras" id="obras2">
+  <div class="sec__inner">
+    <div class="sec__head">
+      <span class="tag">Las obras</span>
+      <h2 class="sec__titulo">10 propuestas escénicas</h2>
+      <p class="sec__bajada">Teatro independiente platense en toda su diversidad.</p>
+    </div>
+    <!-- Cards inyectadas por JS desde data.js -->
+    <div class="obras__grilla" id="obrasGrid2"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ENTRADAS
+══════════════════════════════════════════ -->
+<section class="sec entradas" id="entradas2">
+  <div class="lp-grid-dark" style="position:absolute;inset:0;pointer-events:none;" aria-hidden="true"></div>
+  <div class="sec__inner entradas__inner">
+
+    <div class="sec__head">
+      <span class="tag tag--inv">Entradas</span>
+      <h2 class="sec__titulo sec__titulo--inv">Elegí tu combo</h2>
+      <p class="sec__bajada sec__bajada--inv">Cuanto más obras elegís, más ahorrás.</p>
+    </div>
+
+    <!-- Entrada individual -->
+    <div class="entrada-ind">
+      <div class="entrada-ind__card">
+        <p class="entrada-ind__label">Entrada individual</p>
+        <p class="entrada-ind__precio">$20.000</p>
+        <p class="entrada-ind__desc">Por función, a tu elección</p>
+        <a href="#" class="btn btn--ghost btn--sm">Comprar</a>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="filtros" style="justify-content:center; margin-bottom:1.5rem;">
+      <button class="filtro tab2" data-cat="combos-dias">Pases de día</button>
+      <button class="filtro tab2" data-cat="promos">Promos progresivas</button>
+      <button class="filtro tab2" data-cat="combos-épicos">Pase festival</button>
+    </div>
+
+    <!-- Cards inyectadas por JS -->
+    <div class="combos__grilla" id="pricingWrap2"></div>
+
+    <p class="entradas__nota">* Precio base por función: $20.000. Los combos pueden adquirirse en boletería o vía plataformas online.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SOBRE EL FESTIVAL
+══════════════════════════════════════════ -->
+<section class="sec sobre" id="sobre2">
+  <div class="sec__inner">
+    <div class="sobre__layout">
+
+      <div class="sobre__texto">
+        <span class="tag sobre__tag">El festival</span>
+        <h2 class="sobre__titulo">Teatro que nace<br>de la ciudad</h2>
+
+        <p>TEATLÓN es un ciclo de teatro independiente que nace en y desde La Plata. No es una muestra ni una competencia: es un encuentro. Un espacio donde diez propuestas escénicas comparten cartel durante dos fines de semana intensos, con el único objetivo de que más gente pueda ver más teatro.</p>
+
+        <p>La ciudad tiene una escena vibrante, diversa y muchas veces invisibilizada. TEATLÓN existe para darle visibilidad, para crear público, para construir comunidad —como la misma ciudad fue construida: cuadra a cuadra, con orden y con audacia.</p>
+
+        <p>Funciones en <strong>Espacio 44</strong>, sede del ciclo, un espacio multidisciplinario que combina teatro, danza y música en el corazón de La Plata. Entre cada función, interludio musical y buffet en el patio.</p>
+
+        <div class="sobre__stats">
+          <div class="sobre__stat">
+            <span class="sobre__stat-n">10</span>
+            <span class="sobre__stat-l">obras</span>
+          </div>
+          <div class="sobre__stat">
+            <span class="sobre__stat-n">12</span>
+            <span class="sobre__stat-l">funciones</span>
+          </div>
+          <div class="sobre__stat">
+            <span class="sobre__stat-n">6</span>
+            <span class="sobre__stat-l">noches</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sede-card">
+          <p class="sede-card__icon">📍</p>
+          <h3 class="sede-card__nombre">Espacio 44</h3>
+          <p class="sede-card__tipo">Teatro · Danza · Música</p>
+          <p class="sede-card__addr">La Plata, Buenos Aires<br>Argentina</p>
+          <div class="sede-card__hrs">
+            <p><strong>Viernes y sábados</strong><br>19:00 hs y 21:00 hs</p>
+            <p><strong>Domingos</strong><br>18:00 hs y 20:00 hs</p>
+          </div>
+          <a href="#" class="btn btn--outline btn--sm">Ver ubicación →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTACTO
+══════════════════════════════════════════ -->
+<section class="sec contacto" id="contacto2">
+  <div class="sec__inner">
+    <div class="sec__head">
+      <span class="tag">Contacto &amp; Prensa</span>
+      <h2 class="sec__titulo">¿Querés saber más?</h2>
+    </div>
+
+    <div class="contacto__grilla">
+      <div class="contacto-card">
+        <h3>Prensa &amp; Difusión</h3>
+        <p>Para entrevistas, notas, material gráfico y acreditaciones de prensa.</p>
+        <a href="mailto:prensa@teatlon.com.ar" class="contacto-card__mail">prensa@teatlon.com.ar</a>
+      </div>
+      <div class="contacto-card">
+        <h3>Producción</h3>
+        <p>Para consultas sobre obras, elencos, convocatorias y participación en el ciclo.</p>
+        <a href="mailto:hola@teatlon.com.ar" class="contacto-card__mail">hola@teatlon.com.ar</a>
+      </div>
+      <div class="contacto-card">
+        <h3>Redes sociales</h3>
+        <p>Novedades, anuncios y detrás de escena del festival.</p>
+        <div class="redes">
+          <a href="#" class="red-link">Instagram @teatlon.laplata</a>
+          <a href="#" class="red-link">Facebook</a>
+          <a href="#" class="red-link">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__marca">
+      <span class="footer__logo">TEATLÓN</span>
+      <span class="footer__sub">Ciclo de Teatro Platense</span>
+    </div>
+    <div class="footer__info">
+      <p>5 · 6 · 7 · 12 · 13 · 14 de junio 2026</p>
+      <p>Espacio 44 · La Plata · Argentina</p>
+    </div>
+    <p class="footer__copy">© 2026 TEATLÓN. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="js/main2.js"></script>
+</body>
+</html>
