@@ -51,22 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
             // Color accent bar (inspired by geometric flyer)
             const colorBar = `<div class="obra-color-bar" style="background:${obra.color || 'var(--accent-teal)'};"></div>`;
 
-            // Image or initials placeholder
-            const bgImage = obra.imagen
-                ? `<img src="${obra.imagen}" alt="${obra.titulo}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;filter:brightness(0.7) blur(2px);transition:filter 0.3s ease;" onmouseover="this.style.filter='brightness(0.9) blur(0px)'" onmouseout="this.style.filter='brightness(0.7) blur(2px)'">`
-                : `<div class="obra-img-placeholder" style="background:linear-gradient(135deg,#1c1323,#2a1f33);">${getInitials(obra.titulo)}</div>`;
+            const subtitulo = obra.subtitulo
+                ? `<span style="display:block;font-size:0.72rem;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">${obra.subtitulo}</span>`
+                : '';
 
-            const subtitulo = obra.subtitulo ? `<span style="display:block;font-size:0.75rem;color:var(--accent-teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">${obra.subtitulo}</span>` : '';
+            const headerBg = obra.imagen
+                ? `style="background:linear-gradient(to top, rgba(0,0,0,0.6), ${obra.color}99), url('${obra.imagen}') center/cover no-repeat;"`
+                : `style="background:linear-gradient(135deg, ${obra.color}cc, ${obra.color}88);"`;
+
+            const linkLabel = obra.link && obra.link !== '#entradas'
+                ? 'Ver en Alternativa Teatral →'
+                : 'Conseguir entrada →';
 
             card.innerHTML = `
                 ${colorBar}
-                ${bgImage}
-                <div class="obra-info">
-                    <div class="obra-tags">${obra.duracion} / Dir: ${obra.direccion}</div>
+                <div class="obra-img-placeholder" ${headerBg}>
                     ${subtitulo}
                     <h3 class="obra-title">${obra.titulo}</h3>
-                    <p class="obra-desc">${obra.sinopsis}<br><br><strong>Elenco:</strong> ${obra.elenco}</p>
-                    <a href="${obra.link}" class="obra-link" target="_blank">Ver en Alternativa Teatral →</a>
+                </div>
+                <div class="obra-info">
+                    <div class="obra-tags">Dir: ${obra.direccion} &nbsp;·&nbsp; ${obra.duracion}</div>
+                    <p class="obra-desc">
+                        ${obra.sinopsis}
+                        <br><br>
+                        <strong style="color:var(--text-main);">Elenco:</strong> ${obra.elenco}
+                    </p>
+                    <a href="${obra.link}" class="obra-link" target="_blank">${linkLabel}</a>
                 </div>
             `;
             obrasContainer.appendChild(card);

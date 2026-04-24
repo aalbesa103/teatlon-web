@@ -1,7 +1,7 @@
 /* CSS Variables & Theme */
 :root {
     /* Colors */
-    --bg-dark: #18101E; /* Deep Violet/Black - theater dark */
+    --bg-dark: #000000; /* Pure Black to match logos */
     --bg-light: #FDF6E3; /* Cream white for contrast */
     --text-main: #FDF6E3;
     --text-muted: #A39B9F;
@@ -116,7 +116,7 @@ a {
     top: 0;
     width: 100%;
     padding: 20px 0;
-    background: rgba(24, 16, 30, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: padding var(--transition-fast);
@@ -293,7 +293,7 @@ a {
 
 /* --- About Section --- */
 .about {
-    background-color: #1c1323;
+    background-color: #0A0A0A;
     border-top: 5px solid var(--accent-orange);
 }
 .about-layout {
@@ -358,6 +358,14 @@ a {
     font-size: 1.4rem;
     flex-shrink: 0;
 }
+.sede-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
 .sede-info__bloque strong {
     display: block;
     color: var(--text-main);
@@ -378,89 +386,68 @@ a {
     gap: 30px;
 }
 .obra-card {
-    background: #251a2e;
+    background: #111111;
     position: relative;
     overflow: hidden;
-    height: 380px;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(253, 246, 227, 0.05);
-    transition: transform var(--transition-smooth);
-}
-.obra-card::before { /* La Plata Diagonal subtle pattern on hover */
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(253, 246, 227, 0.02) 10px, rgba(253, 246, 227, 0.02) 11px);
-    opacity: 0;
-    transition: opacity var(--transition-fast);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
 }
 .obra-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     border-color: var(--accent-gold);
 }
-.obra-card:hover::before {
-    opacity: 1;
-}
 
+/* Header coloreado con título */
 .obra-img-placeholder {
-    height: 100%; width: 100%;
-    background: linear-gradient(135deg, var(--bg-dark), #2a1f33);
-    position: absolute; top:0; left:0;
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.1);
-    font-family: var(--font-heading); font-size: 3rem;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem 1.25rem;
+    flex-shrink: 0;
 }
 
 .obra-info {
-    position: absolute;
-    bottom: 0; width: 100%;
-    padding: 30px 20px;
-    background: linear-gradient(to top, rgba(24,16,30,1) 40%, rgba(24,16,30,0) 100%);
-    transform: translateY(60%);
-    transition: transform var(--transition-smooth);
-    z-index: 2;
-}
-.obra-card:hover .obra-info {
-    transform: translateY(0);
+    padding: 1.1rem 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .obra-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--accent-gold);
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 3px #000;
+    margin-bottom: 4px;
+    line-height: 1.15;
 }
 .obra-tags {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--accent-teal);
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
 }
 .obra-desc {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
-    margin-bottom: 15px;
-    opacity: 0;
-    transition: opacity 0.3s 0.1s;
-}
-.obra-card:hover .obra-desc {
-    opacity: 1;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    flex: 1;
 }
 .obra-link {
     color: var(--text-main);
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border-bottom: 1px solid var(--accent-red);
     display: inline-block;
-    opacity: 0;
-    transition: opacity 0.3s 0.2s;
+    transition: color 0.2s;
 }
-.obra-card:hover .obra-link {
-    opacity: 1;
-}
+.obra-link:hover { color: var(--accent-red); }
 
-/* Obra color accent bar */
+/* Barra de color superior por obra */
 .obra-color-bar {
     position: absolute;
     top: 0; left: 0;
@@ -568,7 +555,7 @@ a {
 
 /* --- Entradas --- */
 .entradas {
-    background: linear-gradient(135deg, #1c1323, var(--bg-dark));
+    background: linear-gradient(135deg, #0A0A0A, var(--bg-dark));
     border-top: 1px dashed rgba(253, 246, 227, 0.1);
 }
 .entradas-header {
@@ -584,7 +571,7 @@ a {
     margin-bottom: 40px;
 }
 .tab-btn {
-    background: #2a1f33;
+    background: #1A1A1A;
     border: none;
     color: var(--text-muted);
     padding: 12px 24px;
@@ -684,7 +671,7 @@ a {
 
 /* --- Footer --- */
 .footer {
-    background: #110b15;
+    background: #050505;
     padding: 80px 0 20px;
     border-top: 2px solid var(--accent-teal);
 }

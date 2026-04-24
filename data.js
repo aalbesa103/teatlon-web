@@ -3,28 +3,44 @@ const Data = {
     obras: [
         {
             id: "fotogenesis", titulo: "Fotogénesis", color: "#5F82B0",
-            sinopsis: "María recurre a su terapeuta cuando viejos fantasmas vuelven para cuestionarla. Lo que hasta ese momento fue una sospecha, poco a poco empieza a revelarse como las fotografías...",
-            elenco: "Cintia Silveyra D'avila", direccion: "Micaela Tristan", duracion: "Aprox 60 min", imagen: "img/fotogenesis.jpg", link: "https://www.alternativateatral.com/obra96573-fotogenesis"
+            sinopsis: "María recurre a su terapeuta cuando viejos fantasmas vuelven para cuestionarla. A partir de ahí, su imagen personal y pública se trastornan, se tensionan y entran en contradicción. La búsqueda de una imagen se vuelve una peripecia que la lleva a cuestionarlo todo. ¿Qué pasa cuando la imagen que nos devuelve el espejo no es la verdadera?",
+            elenco: "Cintia Silveyra d'Avila",
+            direccion: "Micaela Tristan",
+            dramaturgia: "Lisandro Fernández",
+            equipo: "Diseño sonoro: Sebastián Morán · Escenografía e iluminación: Juan Camargo · Fotografía: Concepto Visual Fotografía · Vestuario: Martina Cohen Imach · Producción: Lisandro Fernández y Micaela Tristan · Visuales: Micaela Tristan",
+            duracion: "Aprox 60 min", imagen: "img/fotogenesis.jpg", link: "https://www.alternativateatral.com/obra96573-fotogenesis"
         },
         {
             id: "roja", titulo: "Roja", color: "#B83830",
-            sinopsis: "Sinopsis próximamente.",
-            elenco: "A confirmar", direccion: "A confirmar", duracion: "Aprox 60 min", imagen: "", link: "#entradas"
+            sinopsis: "Una anciana espera a sus hijas: hay una cocina, una tarta de manzanas y un secreto guardado por años que está a punto de salir.",
+            elenco: "Verónica Caballero",
+            direccion: "Magui Cabassi",
+            dramaturgia: "Fabricio Castillo",
+            duracion: "60 min aprox", imagen: "", link: "#entradas"
         },
         {
-            id: "desalojo", titulo: "Desalojo", color: "#7A9496",
-            sinopsis: "Una casa, cinco hermanos y una herencia frustrada. Memorias y sueños compartidos derrumbados por la ambición y los intereses foráneos.",
-            elenco: "Mabel Alanis, Tita Alvarez Arigoz, Rubén DI Renta, Silvina Gallina, Julio César Traversa", direccion: "Perico Lascano", duracion: "Aprox 60 min", imagen: "img/desalojo.jpg", link: "https://www.alternativateatral.com/obra80776-desalojo"
+            id: "desalojo", titulo: "Desalojo", subtitulo: "de la ley primera", color: "#7A9496",
+            sinopsis: "Una casa, cinco hermanos y una herencia frustrada. Memorias y sueños compartidos derrumbados por la ambición y los intereses foráneos. \"Como estrellas en el cielo. Desde acá juntitos, desde allá a millones de años luz\".",
+            elenco: "Tita Alvarez Arigoz · Ruber DI Renta · Silvina Gallina · Belén Otero · Julio César Traversa",
+            direccion: "Perico Lascano",
+            dramaturgia: "Perico Lascano",
+            equipo: "Escenografía: Carola Mauriño · Iluminación y Sonido: Facundo Mauriño Lascano · Maquillaje: Guadalupe Garcia · Fotografía: Micaela Bruno · Asistencia de dirección: Ana Ines Marcos · Producción: Puesta En El Alma",
+            duracion: "Aprox 60 min", imagen: "img/desalojo.jpg", link: "https://www.alternativateatral.com.ar/obra81331-el-desalojo-de-la-ley-primera"
         },
         {
-            id: "soysola", titulo: "Soy sola", color: "#7070B0",
+            id: "soysola", titulo: "Soy sola", subtitulo: "de Gastón Chaumeil", color: "#7070B0",
             sinopsis: "Una destacada actriz de la escena nacional vuelve a su pueblo natal para ser declarada ciudadana Ilustre y dar una función a beneficio en el teatro de la ciudad. Durante su breve estadía...",
-            elenco: "Eugenia Arigós, Anahí Gómez Galán, Fabiana Ivanoff, Liliana Pérez Salas", direccion: "Perico Lascano", duracion: "Aprox 60 min", imagen: "img/soysola.jpg", link: "https://www.alternativateatral.com/obra97151-soy-sola"
+            elenco: "Eugenia Arigós · Lili Pérez Salas · Anahí Gómez Galán · Fabiana Ivanoff",
+            direccion: "Perico Lascano", duracion: "Aprox 60 min", imagen: "img/soysola.jpg", link: "https://www.alternativateatral.com/obra97151-soy-sola"
         },
         {
             id: "lluviaverde", titulo: "Lluvia verde", color: "#5A9068",
-            sinopsis: "Sinopsis próximamente.",
-            elenco: "A confirmar", direccion: "A confirmar", duracion: "Aprox 60 min", imagen: "", link: "#entradas"
+            sinopsis: "En un país donde el dinero nunca duerme, un financista juega una partida desigual en un tablero marcado por la corrupción. Nadie es inocente, todos son reemplazables, y el sistema que los contiene es el mismo que, tarde o temprano, los devora.",
+            elenco: "Adrián Carrudo · Gastón Chaumeil · Virginia García Boero · Florencia Selva · Nicolás Soldo",
+            direccion: "Perico Lascano",
+            dramaturgia: "Gastón Chaumeil y Julio Pipo Lleral",
+            equipo: "Maquillaje: Guadalupe García · Sonido: Facundo Mauriño Lascano · Diseño de Iluminación: Alma Lascano · Concepto Estético: Carola Mauriño · Producción general: Puesta En El Alma",
+            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra100686-lluvia-verde"
         },
         {
             id: "jubilacion", titulo: "Jubilación", color: "#C0A030",
@@ -34,23 +50,38 @@ const Data = {
         },
         {
             id: "osadaescritura", titulo: "Osada escritura", color: "#B87840",
-            sinopsis: "\"Osada Escritura\" nace de la pasión por los misterios de lo cotidiano, por los momentos en los que ocurre todo pero no pasa nada, expresados en la literatura de Clarice Lispector.",
-            elenco: "Victoria Cleve Terpay (narración) · María Eugenia Basili (violonchelo)", direccion: "Roxi Drucker", duracion: "Aprox 60 min", imagen: "", link: "#entradas"
+            sinopsis: "¿Quién es Clarice Lispector? ¿Quién soy yo? ¿Quién sos vos? ¿Estás dispuesto a descubrirlo? Un viaje íntimo por los misterios de lo cotidiano, por los momentos en los que ocurre todo pero no pasa nada.",
+            elenco: "Victoria Cleve Terpay (narración) · María Eugenia Basili (violonchelo)",
+            direccion: "Roxi Drucker",
+            dramaturgia: "Victoria Cleve Terpay",
+            equipo: "Música original: Juan Ignacio Ludueña · Diseño de luces: Ayelén Campagna · Asist. dirección: Guillermina Busquets",
+            duracion: "50 min aprox", imagen: "", link: "#entradas"
         },
         {
             id: "flirteo", titulo: "Flirteo", color: "#B07888",
-            sinopsis: "Sinopsis próximamente.",
-            elenco: "A confirmar", direccion: "A confirmar", duracion: "Aprox 60 min", imagen: "", link: "#entradas"
+            sinopsis: "¿Qué sucede cuando la rutina de una oficina gris es interrumpida por el pulso de un deseo secreto? Damián habita un universo de pequeños rituales, silencios cargados y una obsesión que crece entre expedientes y cafés compartidos. En este monólogo, el flirteo no es solo un juego de seducción, sino la última frontera de un hombre que intenta, desesperadamente, ser visto. Una pieza que explora la fragilidad de nuestras fantasías y la soledad que se esconde detrás de la hipercomunicación.",
+            elenco: "Julieta Pellitta",
+            direccion: "Alberto Albesa",
+            dramaturgia: "Alberto Albesa",
+            equipo: "Asistencia de Dirección: Mariana Piro",
+            duracion: "60 mins", imagen: "", link: "#entradas"
         },
         {
-            id: "cuandolascrien", titulo: "Cuando las ranas críen pelos", color: "#908860",
-            sinopsis: "En un pueblo de la provincia, Eugenio, el modisto y Teresa, la costurera transitan sus vidas entre telas y charlas. Alrededor de ellos, el exterior irrumpe a través de Nicolás, un niño...",
-            elenco: "Adrián Carrudo, Ana Ines Marcos, Juan Rodriguez", direccion: "Perico Lascano", duracion: "Aprox 60 min", imagen: "img/cuandolascrien.jpg", link: "https://www.alternativateatral.com/obra83586-cuando-las-ranas-crien-pelos"
+            id: "tardeotemprano", titulo: "Tarde o temprano", color: "#908860",
+            sinopsis: "Años 90. Previa de Semana Santa. Un padre enfermo y el aniversario de la muerte de la madre reúne a las cuatro hermanas Regúnaga. En la sordidez de un despacho de bebidas en la periferia de una ciudad del interior argentino se desarrolla este encuentro. A unas, les urge la necesidad de internar al padre en un asilo de ancianos y a otras sostener ese status quo. Una demanda judicial dispara los enconos, las asignaturas pendientes y la irrupción de la verdad será inevitable. Una comedia dramática basada en hechos reales.",
+            elenco: "Mechi Barragan · Gaby Kin · Ana Marcos · Laura Romero Demelli",
+            direccion: "Magui Cabassi",
+            dramaturgia: "Walter Rodríguez",
+            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra96260-tarde-o-temprano"
         },
         {
             id: "lasesperas", titulo: "Las esperas de Juana", color: "#A08878",
-            sinopsis: "Sinopsis próximamente.",
-            elenco: "A confirmar", direccion: "A confirmar", duracion: "Aprox 60 min", imagen: "", link: "#entradas"
+            sinopsis: "¿Cuánto puede una mujer resistirse a aceptar una realidad que se le impone y que aleja sus deseos más profundos? Determinada a conseguir lo que anhela, Juana persistirá en su propósito de todas las formas posibles y hasta las últimas consecuencias, sabiendo que, en su espera, está la justificación de su existencia.",
+            elenco: "Margarita Baudino Granda · Alejandra Favini",
+            direccion: "Perico Lascano",
+            dramaturgia: "Alejandra Favini",
+            equipo: "Maquillaje: Guadalupe García · Sonido: Facundo Mauriño Lascano · Diseño de Iluminación: Alma Lascano · Concepto Estético: Carola Mauriño · Producción general: Puesta En El Alma",
+            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra100687-las-esperas-de-juana"
         }
     ],
 
@@ -62,16 +93,16 @@ const Data = {
         },
         { dia: "sabados", fechaEtiqueta: "Sábado 6 de Junio",
           eventos: [
-              { hora: "19:00 hs", titulo: "Desalojo", tipo: "obra" },
+              { hora: "19:00 hs", titulo: "Osada Escritura", tipo: "obra" },
               { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "21:00 hs", titulo: "Osada Escritura", tipo: "obra" }
+              { hora: "21:00 hs", titulo: "Tarde o temprano", tipo: "obra" }
           ]
         },
         { dia: "domingos", fechaEtiqueta: "Domingo 7 de Junio",
           eventos: [
-              { hora: "18:00 hs", titulo: "Soy Sola", tipo: "obra" },
-              { hora: "19:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "20:00 hs", titulo: "Flirteo", tipo: "obra" }
+              { hora: "19:00 hs", titulo: "Flirteo", tipo: "obra" },
+              { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
+              { hora: "21:00 hs", titulo: "Soy sola", tipo: "obra" }
           ]
         },
         { dia: "viernes", fechaEtiqueta: "Viernes 12 de Junio",
@@ -81,16 +112,16 @@ const Data = {
         },
         { dia: "sabados", fechaEtiqueta: "Sábado 13 de Junio",
           eventos: [
-              { hora: "19:00 hs", titulo: "Lluvia Verde", tipo: "obra" },
+              { hora: "19:00 hs", titulo: "Las esperas de Juana", tipo: "obra" },
               { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "21:00 hs", titulo: "Las Esperas de Juana", tipo: "obra" }
+              { hora: "21:00 hs", titulo: "Desalojo", tipo: "obra" }
           ]
         },
         { dia: "domingos", fechaEtiqueta: "Domingo 14 de Junio",
           eventos: [
-              { hora: "18:00 hs", titulo: "Jubilación, Grotesco Futurista", tipo: "obra" },
-              { hora: "19:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "20:00 hs", titulo: "Cuando las ranas críen pelos", tipo: "obra" }
+              { hora: "19:00 hs", titulo: "Jubilación, Grotesco Futurista", tipo: "obra" },
+              { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
+              { hora: "21:00 hs", titulo: "Lluvia verde", tipo: "obra" }
           ]
         }
     ],
