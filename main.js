@@ -63,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? 'Ver en Alternativa Teatral →'
                 : 'Conseguir entrada →';
 
+            const dramaturgiaHtml = obra.dramaturgia 
+                ? `<br><strong style="color:var(--text-main);">Dramaturgia:</strong> ${obra.dramaturgia}`
+                : '';
+
             card.innerHTML = `
                 ${colorBar}
                 <div class="obra-img-placeholder" ${headerBg}>
@@ -75,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${obra.sinopsis}
                         <br><br>
                         <strong style="color:var(--text-main);">Elenco:</strong> ${obra.elenco}
+                        ${dramaturgiaHtml}
                     </p>
                     <a href="${obra.link}" class="obra-link" target="_blank">${linkLabel}</a>
                 </div>
