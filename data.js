@@ -16,7 +16,7 @@ const Data = {
             elenco: "Verónica Caballero",
             direccion: "Magui Cabassi",
             dramaturgia: "Fabricio Castillo",
-            duracion: "50 min aprox", imagen: "", link: "https://www.alternativateatral.com.ar/obra100778-roja"
+            duracion: "50 min aprox", imagen: "img/roja.jpg", link: "https://www.alternativateatral.com.ar/obra100778-roja"
         },
         {
             id: "desalojo", titulo: "Desalojo", subtitulo: "de la ley primera", color: "#7A9496",
@@ -40,7 +40,7 @@ const Data = {
             direccion: "Perico Lascano",
             dramaturgia: "Gastón Chaumeil y Julio Pipo Lleral",
             equipo: "Maquillaje: Guadalupe García · Sonido: Facundo Mauriño Lascano · Diseño de Iluminación: Alma Lascano · Concepto Estético: Carola Mauriño · Producción general: Puesta En El Alma",
-            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra100686-lluvia-verde"
+            duracion: "Aprox 60 min", imagen: "img/lluvia_verde.jpg", link: "https://www.alternativateatral.com.ar/obra100686-lluvia-verde"
         },
         {
             id: "jubilacion", titulo: "Jubilación", color: "#C0A030",
@@ -64,15 +64,16 @@ const Data = {
             direccion: "Alberto Albesa",
             dramaturgia: "Alberto Albesa",
             equipo: "Asistencia de Dirección: Mariana Piro",
-            duracion: "60 mins", imagen: "", link: "https://www.alternativateatral.com.ar/obra100756-flirteo"
+            duracion: "60 mins", imagen: "img/flirteo.jpg", link: "https://www.alternativateatral.com.ar/obra100756-flirteo"
         },
         {
-            id: "tardeotemprano", titulo: "Tarde o temprano", color: "#908860",
-            sinopsis: "Años 90. Previa de Semana Santa. Un padre enfermo y el aniversario de la muerte de la madre reúne a las cuatro hermanas Regúnaga. En la sordidez de un despacho de bebidas en la periferia de una ciudad del interior argentino se desarrolla este encuentro. A unas, les urge la necesidad de internar al padre en un asilo de ancianos y a otras sostener ese status quo. Una demanda judicial dispara los enconos, las asignaturas pendientes y la irrupción de la verdad será inevitable. Una comedia dramática basada en hechos reales.",
-            elenco: "Mechi Barragan · Gaby Kin · Ana Marcos · Laura Romero Demelli",
-            direccion: "Magui Cabassi",
+            id: "cuandolasranas", titulo: "Cuando las ranas críen pelos", color: "#908860",
+            sinopsis: "En un pueblo de la provincia, Eugenio, el modisto y Teresa, la costurera transitan sus vidas entre telas y charlas. Alrededor de ellos, el exterior irrumpe a través de Nicolás, un niño que desde su inocencia dice aquello que el resto habla a espaldas. La obra se recrea en tres momentos bisagra de la reciente historia argentina: 1980, 1983 y 2001.",
+            elenco: "Adrián Carrudo · Ana Inés Marcos · Juan Rodríguez",
+            direccion: "Perico Lascano",
             dramaturgia: "Walter Rodríguez",
-            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra96260-tarde-o-temprano"
+            equipo: "Iluminación: Facundo Mauriño Lascano · Maquillaje: Carola Mauriño · Fotografía: Micaela Bruno · Producción: Puesta En El Alma",
+            duracion: "Aprox 60 min", imagen: "img/cuandolascrien.jpg", link: "https://www.alternativateatral.com.ar/obra83586-cuando-las-ranas-crien-pelos"
         },
         {
             id: "lasesperas", titulo: "Las esperas de Juana", color: "#A08878",
@@ -95,7 +96,7 @@ const Data = {
           eventos: [
               { hora: "19:00 hs", titulo: "Osada Escritura", tipo: "obra" },
               { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "21:00 hs", titulo: "Tarde o temprano", tipo: "obra" }
+              { hora: "21:00 hs", titulo: "Cuando las ranas críen pelos", tipo: "obra" }
           ]
         },
         { dia: "domingos", fechaEtiqueta: "Domingo 7 de Junio",
