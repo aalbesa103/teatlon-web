@@ -150,47 +150,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 4. Render Entradas y Tabs
-    const pricingContainer = document.getElementById('pricing-container');
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    // 4. Render Entradas — links a Alternativa Teatral
+    const entradasContainer = document.getElementById('entradas-links-container');
+    if (entradasContainer && Data.obras) {
+        Data.obras.forEach(obra => {
+            // Solo mostrar obras con link real a Alternativa
+            if (!obra.link || obra.link === '#entradas') return;
 
-    const renderPricing = (category) => {
-        pricingContainer.innerHTML = '';
-        const items = Data.entradas[category];
-        if (!items) return;
-
-        const grid = document.createElement('div');
-        grid.className = 'pricing-grid active';
-
-        items.forEach(item => {
             const card = document.createElement('div');
-            card.className = `pricing-card ${item.isEpic ? 'epic' : ''}`;
-            
-            let html = `<h4 class="card-title">${item.titulo}</h4>`;
-            html += `<div class="card-price">${item.precio}</div>`;
-            if (item.ahorro) {
-                html += `<div class="card-savings">${item.ahorro}</div>`;
-            }
-            html += `<p class="card-desc">${item.desc}</p>`;
-            html += `<a href="#" class="btn ${item.isEpic ? 'btn-primary' : 'btn-secondary'}">${item.cta}</a>`;
-            
-            card.innerHTML = html;
-            grid.appendChild(card);
-        });
+            card.className = 'entrada-link-card';
+            card.style.borderTop = `3px solid ${obra.color || 'var(--accent-teal)'}`;
 
-        pricingContainer.appendChild(grid);
-    };
-
-    if (pricingContainer && Data.entradas) {
-        // Init with individuales
-        renderPricing('individuales');
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                renderPricing(e.target.dataset.target);
-            });
+            card.innerHTML = `
+                <span class="entrada-link-titulo">${obra.titulo}</span>
+                <span class="entrada-link-dir">Dir: ${obra.direccion}</span>
+                <a href="${obra.link}" class="btn btn-primary entrada-link-btn" target="_blank">Comprar entrada →</a>
+            `;
+            entradasContainer.appendChild(card);
         });
     }
 });

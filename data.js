@@ -12,11 +12,11 @@ const Data = {
         },
         {
             id: "roja", titulo: "Roja", color: "#B83830",
-            sinopsis: "Una anciana espera a sus hijas: hay una cocina, una tarta de manzanas y un secreto guardado por años que está a punto de salir.",
+            sinopsis: "En un pueblo del interior bonaerense una mujer de ochenta y tres años se prepara para recibir a sus hijas con una excusa doméstica: compartir una simple merienda. Pero bajo la aparente rutina late la feroz urgencia de revelarles un secreto que ha enterrado durante toda su vida.",
             elenco: "Verónica Caballero",
             direccion: "Magui Cabassi",
             dramaturgia: "Fabricio Castillo",
-            duracion: "60 min aprox", imagen: "", link: "#entradas"
+            duracion: "50 min aprox", imagen: "", link: "https://www.alternativateatral.com.ar/obra100778-roja"
         },
         {
             id: "desalojo", titulo: "Desalojo", subtitulo: "de la ley primera", color: "#7A9496",
@@ -55,7 +55,7 @@ const Data = {
             direccion: "Roxi Drucker",
             dramaturgia: "Victoria Cleve Terpay",
             equipo: "Música original: Juan Ignacio Ludueña · Diseño de luces: Ayelén Campagna · Asist. dirección: Guillermina Busquets",
-            duracion: "50 min aprox", imagen: "", link: "#entradas"
+            duracion: "50 min aprox", imagen: "", link: "https://www.alternativateatral.com/obra100759-osada-escritura"
         },
         {
             id: "flirteo", titulo: "Flirteo", color: "#B07888",
@@ -64,7 +64,7 @@ const Data = {
             direccion: "Alberto Albesa",
             dramaturgia: "Alberto Albesa",
             equipo: "Asistencia de Dirección: Mariana Piro",
-            duracion: "60 mins", imagen: "", link: "#entradas"
+            duracion: "60 mins", imagen: "", link: "https://www.alternativateatral.com.ar/obra100756-flirteo"
         },
         {
             id: "tardeotemprano", titulo: "Tarde o temprano", color: "#908860",
@@ -100,9 +100,8 @@ const Data = {
         },
         { dia: "domingos", fechaEtiqueta: "Domingo 7 de Junio",
           eventos: [
-              { hora: "19:00 hs", titulo: "Flirteo", tipo: "obra" },
-              { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "21:00 hs", titulo: "Soy sola", tipo: "obra" }
+              { hora: "18:00 hs", titulo: "Flirteo", tipo: "obra" },
+              { hora: "20:00 hs", titulo: "Soy sola", tipo: "obra" }
           ]
         },
         { dia: "viernes", fechaEtiqueta: "Viernes 12 de Junio",
@@ -119,9 +118,8 @@ const Data = {
         },
         { dia: "domingos", fechaEtiqueta: "Domingo 14 de Junio",
           eventos: [
-              { hora: "19:00 hs", titulo: "Jubilación, Grotesco Futurista", tipo: "obra" },
-              { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
-              { hora: "21:00 hs", titulo: "Lluvia verde", tipo: "obra" }
+              { hora: "18:00 hs", titulo: "Jubilación, Grotesco Futurista", tipo: "obra" },
+              { hora: "20:00 hs", titulo: "Lluvia verde", tipo: "obra" }
           ]
         }
     ],
