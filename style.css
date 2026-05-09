@@ -402,7 +402,7 @@ a {
 
 /* Header coloreado con título */
 .obra-img-placeholder {
-    height: 120px;
+    height: 200px;
     width: 100%;
     display: flex;
     align-items: flex-end;

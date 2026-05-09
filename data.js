@@ -74,15 +74,6 @@ const Data = {
             dramaturgia: "Walter Rodríguez",
             equipo: "Iluminación: Facundo Mauriño Lascano · Maquillaje: Carola Mauriño · Fotografía: Micaela Bruno · Producción: Puesta En El Alma",
             duracion: "Aprox 60 min", imagen: "img/cuandolascrien.jpg", link: "https://www.alternativateatral.com.ar/obra83586-cuando-las-ranas-crien-pelos"
-        },
-        {
-            id: "lasesperas", titulo: "Las esperas de Juana", color: "#A08878",
-            sinopsis: "¿Cuánto puede una mujer resistirse a aceptar una realidad que se le impone y que aleja sus deseos más profundos? Determinada a conseguir lo que anhela, Juana persistirá en su propósito de todas las formas posibles y hasta las últimas consecuencias, sabiendo que, en su espera, está la justificación de su existencia.",
-            elenco: "Margarita Baudino Granda · Alejandra Favini",
-            direccion: "Perico Lascano",
-            dramaturgia: "Alejandra Favini",
-            equipo: "Maquillaje: Guadalupe García · Sonido: Facundo Mauriño Lascano · Diseño de Iluminación: Alma Lascano · Concepto Estético: Carola Mauriño · Producción general: Puesta En El Alma",
-            duracion: "Aprox 60 min", imagen: "", link: "https://www.alternativateatral.com.ar/obra100687-las-esperas-de-juana"
         }
     ],
 
@@ -112,7 +103,7 @@ const Data = {
         },
         { dia: "sabados", fechaEtiqueta: "Sábado 13 de Junio",
           eventos: [
-              { hora: "19:00 hs", titulo: "Las esperas de Juana", tipo: "obra" },
+              { hora: "19:00 hs", titulo: "Roja", tipo: "obra" },
               { hora: "20:00 hs", titulo: "Interludio Musical y Buffet (Patio)", tipo: "interludio" },
               { hora: "21:00 hs", titulo: "Desalojo", tipo: "obra" }
           ]
