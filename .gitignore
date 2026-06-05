@@ -1,0 +1,29 @@
+# Temp files
+~$*
+*.tmp
+*.pyc
+__pycache__/
+
+# IDE
+.claude/
+.vscode/
+
+# Extracted/temp data
+temp_output*.txt
+extracted_synopsis.txt
+
+# Python scripts (dev only)
+*.py
+
+# Gemini generated images in root (large, not needed for web)
+Gemini_Generated_Image_*
+
+# Word docs (source material, not web)
+*.docx
+
+# Excel temp
+~$*.xlsx
+
+# OS files
+Thumbs.db
+.DS_Store
